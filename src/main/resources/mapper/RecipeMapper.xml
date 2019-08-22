@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="recipeMapper">
+	<insert id="insertRecipeOne" parameterType="com.sts.vo.RecipeVO">
+		INSERT INTO RECIPE1 VALUES (SEQ_RID.NEXTVAL, #{rname}, #{ritem},#{rcontent},0, #{rimage, jdbcType=BLOB})
+	</insert>	
+	<select id="selectRecipeList" resultType="com.sts.vo.ResipeVO">
+		SELECT RNAME, RITEM, RCONTENT, RHIT FROM RECIPE1
+	</select>
+</mapper>
